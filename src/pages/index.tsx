@@ -3,6 +3,7 @@ import { PageProps, graphql } from 'gatsby'
 
 import SEO from '../components/seo'
 import { ComingSoonImage } from '../components/Image'
+import '../components/layout.css'
 
 type DataProps = {
   site: {
@@ -14,7 +15,6 @@ const Home: React.FC<PageProps<DataProps>> = ({ data }) => {
     return <>
       <SEO title="Home" />
       <div
-        className="GIANA-LOOK"
         style={{
           position: 'fixed',
           top:  '50%',
