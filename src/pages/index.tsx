@@ -2,7 +2,7 @@ import React from 'react'
 import { PageProps, graphql } from 'gatsby'
 
 import SEO from '../components/seo'
-import { ComingSoonImage } from '../components/Image'
+import { ComingSoonImage } from '../components/image'
 import '../components/layout.css'
 
 type DataProps = {
