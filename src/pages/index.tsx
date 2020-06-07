@@ -1,21 +1,18 @@
 import React from 'react'
-import { PageProps, graphql } from 'gatsby'
-import { Text } from 'grommet'
+import styled from 'styled-components'
 
-import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { ComingSoonImage } from '../components/image'
-import '../components/layout.css'
 
-type DataProps = {
-  site: {
-    buildTime: string
-  }
-}
+const Wrapper = styled.div`
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+`
 
-const Home: React.FC<PageProps<DataProps>> = ({ data }) => {
-    return <Layout>
-      <SEO title="Home" />
+const Home: React.FC = () => {
+    return <Wrapper>
+      <SEO title="Coming Soon" />
       <div
         style={{
           position: 'fixed',
@@ -25,18 +22,8 @@ const Home: React.FC<PageProps<DataProps>> = ({ data }) => {
         }}
       >
         <ComingSoonImage />
-        <br></br>
-        <Text style={{color: 'white'}}>Hey Giana, how's it going?</Text>
       </div>
-    </Layout>
+    </Wrapper>
 }
 
 export default Home
-
-export const query = graphql`
-  {
-    site {
-      buildTime(formatString: "YYYY-MM-DD hh:mm a z")
-    }
-  }
-`
