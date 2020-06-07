@@ -9,11 +9,11 @@ const Wrapper = styled.div`
     background-color: white;
 `
 
-const HomePage: React.FC = () => {
+const HomePage = (): JSX.Element => {
     return <Layout>
         <Wrapper>
             <SEO title="Home Page" />
-            <Text>Giana</Text>
+            <Text>MY SICK SITE</Text>
         </Wrapper>
     </Layout>
 }

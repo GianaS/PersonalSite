@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 
 import SEO from '../components/seo'
-import { ComingSoonImage } from '../components/image'
 
 const Wrapper = styled.div`
   background-color: black;
@@ -10,7 +9,7 @@ const Wrapper = styled.div`
   height: 100vh;
 `
 
-const Home: React.FC = () => {
+const Home = (): JSX.Element => {
     return <Wrapper>
       <SEO title="Coming Soon" />
       <div
@@ -21,7 +20,12 @@ const Home: React.FC = () => {
           transform: 'translate(-50%,-50%)'
         }}
       >
-        <ComingSoonImage />
+      <img
+        src='../images/coming-soon.jpg'
+        alt='lemon'
+        width='500'
+        height='260' 
+      />
       </div>
     </Wrapper>
 }

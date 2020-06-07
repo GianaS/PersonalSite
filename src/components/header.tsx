@@ -1,36 +1,71 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const HeaderWrapper = styled.div`
-  background-color: blue;
+  background-color: transparent;
   margin: 0 auto;
-  padding: 1.45rem 1.0875rem;
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px;
+  align-items: center;
 `
 
-const Header = ({ siteTitle }) => (
-    <HeaderWrapper>
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to='/'
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </HeaderWrapper>
-)
+const TabsWrapper = styled.div`
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
+`
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
+const Tabs = styled(Link)`
+  color: black;
+  text-decoration: none;
+`
 
-Header.defaultProps = {
-  siteTitle: ``,
+const ImageWrapper = styled.img`
+  width: 50px;
+  margin-bottom: 0;
+`
+
+const Header = (): JSX.Element => {
+  const tabs = [
+    { 
+      title: 'Home',
+      link: '/'
+    },
+    {
+      title: 'About',
+      link: '/about'
+    },
+    {
+      title: 'Resume',
+      link: '/resume'
+    },
+    {
+      title: 'Contact',
+      link: '/contact'
+    },
+    {
+      title: 'Unfound',
+      link: '/404',
+    }
+  ]
+
+    return (
+      <HeaderWrapper>
+        <ImageWrapper src='../images/lemon.png' alt='lemon'/>
+        <TabsWrapper>
+          {tabs.map(({title, link}) => {
+            return (
+              <Tabs key={title} to={link}>
+                {title}
+              </Tabs>
+            )
+          })}
+        </TabsWrapper>
+      </HeaderWrapper>
+    )
 }
 
 export default Header
