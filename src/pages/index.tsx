@@ -22,6 +22,7 @@ const Home: React.FC<PageProps<DataProps>> = ({ data }) => {
           transform: 'translate(-50%,-50%)'
         }}
       >
+        <p style={{color: 'white'}}>Hey Giana, how's it going?</p>
         <ComingSoonImage />
       </div>
     </>

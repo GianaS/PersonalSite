@@ -1,6 +1,5 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
 /*
  * This component is built using `gatsby-image` to automatically serve optimized
@@ -43,8 +42,15 @@ const ComingSoonImage = () => {
       }
     }
   `)
-  return <img src={data.file.childImageSharp.fluid.originalImg} alt='coming soon' width='500' height='260' />
-
+  return (
+    <img
+      src={data.file.childImageSharp.fluid.originalImg}
+      alt='coming
+      soon'
+      width='500'
+      height='260' 
+    />
+  )
 }
 
 export {
