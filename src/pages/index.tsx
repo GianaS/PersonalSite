@@ -1,6 +1,8 @@
 import React from 'react'
 import { PageProps, graphql } from 'gatsby'
+import { Text } from 'grommet'
 
+import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { ComingSoonImage } from '../components/image'
 import '../components/layout.css'
@@ -12,7 +14,7 @@ type DataProps = {
 }
 
 const Home: React.FC<PageProps<DataProps>> = ({ data }) => {
-    return <>
+    return <Layout>
       <SEO title="Home" />
       <div
         style={{
@@ -22,10 +24,11 @@ const Home: React.FC<PageProps<DataProps>> = ({ data }) => {
           transform: 'translate(-50%,-50%)'
         }}
       >
-        <p style={{color: 'white'}}>Hey Giana, how's it going?</p>
         <ComingSoonImage />
+        <br></br>
+        <Text style={{color: 'white'}}>Hey Giana, how's it going?</Text>
       </div>
-    </>
+    </Layout>
 }
 
 export default Home
