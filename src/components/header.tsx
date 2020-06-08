@@ -4,11 +4,9 @@ import styled from 'styled-components'
 
 const HeaderWrapper = styled.div`
   background-color: transparent;
-  margin: 0 auto;
-  padding: 10px 10px;
+  padding: 10px 30px;
   display: flex;
   justify-content: space-between;
-  border-bottom: solid 1px;
   align-items: center;
 `
 
@@ -47,7 +45,7 @@ const Header = (): JSX.Element => {
       link: '/contact'
     },
     {
-      title: 'Unfound',
+      title: 'Not Found',
       link: '/404',
     }
   ]

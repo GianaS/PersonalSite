@@ -22,16 +22,6 @@ type LayoutProps = {
 }
 
 const Layout = ({ children }: LayoutProps) => {
-  // const data = useStaticQuery(graphql`
-  //   query SiteTitleQuery {
-  //     site {
-  //       siteMetadata {
-  //         title
-  //       }
-  //     }
-  //   }
-  // `)
-
   return (
     <Grommet theme={theme}>
       <Header />
