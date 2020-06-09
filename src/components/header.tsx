@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
-const HeaderWrapper = styled.div`
+const Wrapper = styled.div`
   background-color: transparent;
   padding: 10px 30px;
   display: flex;
@@ -10,25 +10,25 @@ const HeaderWrapper = styled.div`
   align-items: center;
 `
 
-const TabsWrapper = styled.div`
+const Tabs = styled.div`
   width: 30%;
   display: flex;
   justify-content: space-between;
 `
 
-const Tabs = styled(Link)`
+const Tab = styled(Link)`
   color: black;
   text-decoration: none;
 `
 
-const ImageWrapper = styled.img`
+const Image = styled.img`
   width: 50px;
   margin-bottom: 0;
 `
 
 const Header = (): JSX.Element => {
   const tabs = [
-    { 
+    {
       title: 'Home',
       link: '/'
     },
@@ -50,20 +50,20 @@ const Header = (): JSX.Element => {
     }
   ]
 
-    return (
-      <HeaderWrapper>
-        <ImageWrapper src='../images/lemon.png' alt='lemon'/>
-        <TabsWrapper>
-          {tabs.map(({title, link}) => {
-            return (
-              <Tabs key={title} to={link}>
-                {title}
-              </Tabs>
-            )
-          })}
-        </TabsWrapper>
-      </HeaderWrapper>
-    )
+  return (
+    <Wrapper>
+      <Image src='../images/lemon.png' alt='lemon' />
+      <Tabs>
+        {tabs.map(({ title, link }) => {
+          return (
+            <Tab key={title}>
+              {title}
+            </Tab>
+          )
+        })}
+      </Tabs>
+    </Wrapper>
+  )
 }
 
 export default Header

@@ -12,15 +12,17 @@ const Wrapper = styled.div`
 `
 
 const Home = (): JSX.Element => {
-    return <Wrapper>
+  return (
+    <Wrapper>
       <SEO title="Coming Soon" />
       <img
         src='../images/coming-soon.jpg'
         alt='lemon'
         width='500'
-        height='260' 
+        height='260'
       />
     </Wrapper>
+  )
 }
 
 export default Home

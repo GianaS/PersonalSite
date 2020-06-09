@@ -1,18 +1,10 @@
 import React from 'react'
-import { Grommet } from 'grommet'
 import styled from 'styled-components'
 
 import Header from './header'
 
-const theme = {
-  global: {
-    font: {
-      family: 'Arial'
-    }
-  }
-}
 
-const Contents = styled.div`
+const Contents = styled.main`
   width: 100vw;
   height: 100vh;
 `
@@ -23,12 +15,12 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <Grommet theme={theme}>
+    <>
       <Header />
       <Contents>
-        <main>{children}</main>
+        {children}
       </Contents>
-    </Grommet>
+    </>
   )
 }
 
