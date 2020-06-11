@@ -5,7 +5,11 @@ import Header from './header'
 
 
 const Contents = styled.main`
-  width: 100vw;
+  width: 100%;
+  height: 100%;
+`
+
+const LayoutWrapper = styled.div`
   height: 100vh;
 `
 
@@ -15,12 +19,12 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <>
+    <LayoutWrapper>
       <Header />
       <Contents>
         {children}
       </Contents>
-    </>
+    </LayoutWrapper>
   )
 }
 

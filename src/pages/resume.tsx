@@ -18,17 +18,17 @@ const Wrapper = styled.div`
   height: 100%;
 `
 
-const NotFound = (): JSX.Element => {
+const Resume = (): JSX.Element => {
   return (
     <Layout>
       <Wrapper>
         <SEO title='Home Page' />
         <div>
-          <Name>Not Found</Name>
+          <Name>Resume</Name>
         </div>
       </Wrapper>
     </Layout>
   )
 }
 
-export default NotFound
+export default Resume

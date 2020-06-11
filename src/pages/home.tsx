@@ -10,6 +10,10 @@ const Name = styled.p`
   margin-bottom: 0px;
 `
 
+const Subheading = styled.p`
+  font-size: 30px;
+`
+
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -18,17 +22,18 @@ const Wrapper = styled.div`
   height: 100%;
 `
 
-const NotFound = (): JSX.Element => {
+const Home = (): JSX.Element => {
   return (
     <Layout>
       <Wrapper>
         <SEO title='Home Page' />
         <div>
-          <Name>Not Found</Name>
+          <Name>Giana Solviletti</Name>
+          <Subheading>Software Engineer</Subheading>
         </div>
       </Wrapper>
     </Layout>
   )
 }
 
-export default NotFound
+export default Home

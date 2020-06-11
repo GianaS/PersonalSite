@@ -4,24 +4,31 @@ import styled from 'styled-components'
 import SEO from '../components/seo'
 import Layout from '../components/layout'
 
-const Wrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  margin-top: 130px;
+const Name = styled.p`
+  font-size: 108px;
+  font-weight: bold;
+  margin-bottom: 0px;
 `
 
-const HomePage = (): JSX.Element => {
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+`
+
+const Contact = (): JSX.Element => {
   return (
     <Layout>
       <Wrapper>
         <SEO title='Home Page' />
         <div>
-          <h1>Hey hey, I'm Giana</h1>
-          <p>I am a software engineer, mathematician <br/> & Beyoncé's biggest fan</p>
+          <Name>Contact</Name>
         </div>
       </Wrapper>
     </Layout>
   )
 }
 
-export default HomePage
+export default Contact

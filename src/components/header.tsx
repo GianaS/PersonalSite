@@ -4,10 +4,12 @@ import styled from 'styled-components'
 
 const Wrapper = styled.div`
   background-color: transparent;
-  padding: 10px 30px;
+  padding: 25px 35px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  width: 100%;
 `
 
 const Tabs = styled.div`
@@ -18,19 +20,23 @@ const Tabs = styled.div`
 
 const Tab = styled(Link)`
   color: black;
-  text-decoration: none;
+  font-size: 18px;
+  &.active {
+    border-bottom: solid 1px black;
+    padding-bottom: 8px;
+  }
 `
 
 const Image = styled.img`
   width: 50px;
-  margin-bottom: 0;
+  margin-bottom: 8px;
 `
 
 const Header = (): JSX.Element => {
   const tabs = [
     {
       title: 'Home',
-      link: '/'
+      link: '/home'
     },
     {
       title: 'About',
@@ -56,7 +62,7 @@ const Header = (): JSX.Element => {
       <Tabs>
         {tabs.map(({ title, link }) => {
           return (
-            <Tab key={title}>
+            <Tab to={link} activeClassName={'active'} key={title} >
               {title}
             </Tab>
           )
