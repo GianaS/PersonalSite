@@ -1,7 +1,6 @@
-import React, { Dispatch, SetStateAction } from 'react'
+import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { Image } from 'semantic-ui-react'
 
 const Wrapper = styled.div`
   padding: 30px;
