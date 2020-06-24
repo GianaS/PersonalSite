@@ -81,9 +81,9 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
       <Transition animation='jiggle' visible={animate}>
         <TwoLemons src='../images/two-lemons.png' alt='two-lemons' />
       </Transition> */}
-      <Contents>
+      {/* <Contents> */}
         {children}
-      </Contents>
+      {/* </Contents> */}
     </LayoutWrapper>
   )
 }
