@@ -2,7 +2,7 @@ import React from 'react'
 
 const useMedia = (query: string): boolean => {
     const [matches, setMatches] = React.useState(
-        typeof window !== 'undefined' ? window.matchMedia(query).matches : false
+        window.matchMedia(query).matches
     )
 
     React.useEffect(() => {

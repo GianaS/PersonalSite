@@ -50,28 +50,31 @@ const MobileNavbar = ({ setAnimate }: MobileNavbarProps): JSX.Element => {
       <StyledButton icon onClick={() => setShowSidebar(!showSidebar)}>
         <Icon name='bars' />
       </StyledButton>
-      <Sidebar
-        as={Menu}
-        animation='overlay'
-        icon='bars'
-        inverted
-        onHide={() => setShowSidebar(false)}
-        vertical
-        visible={showSidebar}
-        width='thin'
-        direction='right'
-      >
-        {navbarItems.map(({ title, link, icon }) => {
-          return (
-            <Menu.Item key={title}>
-              <MenuItemWrapper to={link}>
-                <Icon name={icon} />
-                <ItemText>{title}</ItemText>
-              </MenuItemWrapper>
-            </Menu.Item>
-          )
-        })}
-      </Sidebar>
+      {
+        showSidebar
+          ?
+          <Sidebar
+            as={Menu}
+            inverted
+            onHide={() => setShowSidebar(false)}
+            vertical
+            visible={showSidebar}
+            width='thin'
+            direction='right'
+          >
+            {navbarItems.map(({ title, link, icon }) => {
+              return (
+                <Menu.Item key={title}>
+                  <MenuItemWrapper to={link}>
+                    <Icon name={icon} />
+                    <ItemText>{title}</ItemText>
+                  </MenuItemWrapper>
+                </Menu.Item>
+              )
+            })}
+          </Sidebar>
+          : null
+      }
     </Wrapper>
   )
 }

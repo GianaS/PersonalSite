@@ -53,19 +53,22 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
   const [animate, setAnimate] = React.useState(true)
-  const navbarBreakpoint = useMedia('(max-width: 800px)')
+  const navbarBreakpoint = typeof window !== 'undefined' ? useMedia('(max-width: 800px)') : undefined
 
   React.useEffect(() => {
     if (animate) setAnimate(!animate)
   }, [animate])
 
+  const Navigation = navbarBreakpoint === undefined ? null :
+    (
+      navbarBreakpoint
+        ? <MobileNavbar setAnimate={() => setAnimate(!animate)} />
+        : <Navbar setAnimate={() => setAnimate(!animate)} />
+    )
+
   return (
     <LayoutWrapper>
-      {
-        navbarBreakpoint
-          ? <MobileNavbar setAnimate={() => setAnimate(!animate)} />
-          : <Navbar setAnimate={() => setAnimate(!animate)} />
-      }
+      {Navigation}
       <Contents>
         <Transition animation='jiggle' visible={animate}>
           <LemonLeaf src='../images/lemon-leaf.png' alt='lemon-leaf' />
