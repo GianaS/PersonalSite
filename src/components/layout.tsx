@@ -17,7 +17,7 @@ const Contents = styled.main`
 
 const LemonLeaf = styled(Image)`
   position: absolute !important;
-  right: 0;
+  right: 0%;
   top: 10%;
   z-index: -1;
   width: calc(120px + (270 - 120) * ((100vw - 300px) / (2000 - 300)));
@@ -26,7 +26,7 @@ const LemonLeaf = styled(Image)`
 const HalfLemon = styled(Image)`
   position: absolute !important;
   left: 10%;
-  top: 0;
+  top: 0%;
   z-index: -1;
   width: calc(100px + (205 - 100) * ((100vw - 300px) / (2000 - 300)));
 `
@@ -41,7 +41,7 @@ const TwoLemons = styled(Image)`
 
 const WholeLemon = styled(Image)`
   position: absolute !important;
-  bottom: 0;
+  bottom: 0%;
   right: 5%;
   z-index: -1;
   width: calc(110px + (202 - 110) * ((100vw - 300px) / (2000 - 300)));
