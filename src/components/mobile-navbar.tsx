@@ -58,7 +58,7 @@ const MobileNavbar = ({ setAnimate }: MobileNavbarProps): JSX.Element => {
         onHide={() => setShowSidebar(false)}
         vertical
         visible={showSidebar}
-        width='very wide'
+        width='thin'
         direction='right'
       >
         {navbarItems.map(({ title, link, icon }) => {

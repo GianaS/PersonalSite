@@ -20,27 +20,31 @@ const LemonLeaf = styled(Image)`
   right: 0;
   top: 76px;
   z-index: -1;
+  width: calc(120px + (270 - 120) * ((100vw - 300px) / (2000 - 300)));
 `
 
 const HalfLemon = styled(Image)`
   position: absolute !important;
-  left: 219px;
+  left: 10%;
   top: -8px;
   z-index: -1;
+  width: calc(100px + (205 - 100) * ((100vw - 300px) / (2000 - 300)));
 `
 
 const TwoLemons = styled(Image)`
   position: absolute !important;
-  left: 45px;
+  left: 3%;
   bottom: -10px;
   z-index: -1;
+  width: calc(100px + (202 - 100) * ((100vw - 300px) / (2000 - 300)));
 `
 
 const WholeLemon = styled(Image)`
   position: absolute !important;
   bottom: -20px;
-  right: 85px;
+  right: 5%;
   z-index: -1;
+  width: calc(110px + (202 - 110) * ((100vw - 300px) / (2000 - 300)));
 `
 
 type LayoutProps = {
@@ -75,6 +79,7 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
         <Transition animation='jiggle' visible={animate}>
           <TwoLemons src='../images/two-lemons.png' alt='two-lemons' />
         </Transition>
+
         {children}
       </Contents>
     </LayoutWrapper>
