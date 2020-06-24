@@ -1,5 +1,7 @@
-import { useMedia } from './utilities'
+import { useMedia } from './functions'
+import { navbarItems } from './constants'
 
 export {
-    useMedia
+    useMedia,
+    navbarItems
 }

@@ -1,7 +1,6 @@
 import React from 'react'
 
 const useMedia = (query: string) => {
-    console.log("this is query", query)
     const [matches, setMatches] = React.useState(
         window.matchMedia(query).matches
     )
