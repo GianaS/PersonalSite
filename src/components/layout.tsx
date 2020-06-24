@@ -11,8 +11,8 @@ const LayoutWrapper = styled.div`
 `
 
 const Contents = styled.main`
-  width: 100%;
-  height: 100%;
+  width: 100wh;
+  height: 100vh;
 `
 
 const LemonLeaf = styled(Image)`
