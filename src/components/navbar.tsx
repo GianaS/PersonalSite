@@ -43,18 +43,20 @@ const Navbar = ({ setAnimate }: NavbarProps): JSX.Element => {
     <Wrapper>
       <Logo setAnimate={setAnimate} />
       <Tabs>
-        {navbarItems.map(({ title, link }) => {
-          return (
-            <Tab
-              to={link}
-              onClick={setAnimate}
-              activeClassName={'active'}
-              key={title}
-            >
-              {title}
-            </Tab>
-          )
-        })}
+        {
+          navbarItems.map(({ title, link }) => {
+            return (
+              <Tab
+                to={link}
+                onClick={setAnimate}
+                activeClassName={'active'}
+                key={title}
+              >
+                {title}
+              </Tab>
+            )
+          })
+        }
       </Tabs>
     </Wrapper>
   )

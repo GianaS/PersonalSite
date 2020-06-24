@@ -26,7 +26,7 @@ const LemonLeaf = styled(Image)`
 const HalfLemon = styled(Image)`
   position: absolute !important;
   left: 10%;
-  top: -8px;
+  top: 0;
   z-index: -1;
   width: calc(100px + (205 - 100) * ((100vw - 300px) / (2000 - 300)));
 `
@@ -34,14 +34,14 @@ const HalfLemon = styled(Image)`
 const TwoLemons = styled(Image)`
   position: absolute !important;
   left: 3%;
-  bottom: -10px;
+  bottom: 7%;
   z-index: -1;
   width: calc(100px + (202 - 100) * ((100vw - 300px) / (2000 - 300)));
 `
 
 const WholeLemon = styled(Image)`
   position: absolute !important;
-  bottom: -20px;
+  bottom: 0;
   right: 5%;
   z-index: -1;
   width: calc(110px + (202 - 110) * ((100vw - 300px) / (2000 - 300)));
@@ -69,20 +69,19 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
     <LayoutWrapper>
       {Navigation}
+      <Transition animation='jiggle' visible={animate}>
+        <LemonLeaf src='../images/lemon-leaf.png' alt='lemon-leaf' />
+      </Transition>
+      <Transition animation='jiggle' visible={animate}>
+        <HalfLemon src='../images/half-lemon.png' alt='half-lemon' />
+      </Transition>
+      <Transition animation='jiggle' visible={animate}>
+        <WholeLemon src='../images/whole-lemon.png' alt='whole-lemon' />
+      </Transition>
+      <Transition animation='jiggle' visible={animate}>
+        <TwoLemons src='../images/two-lemons.png' alt='two-lemons' />
+      </Transition>
       <Contents>
-        <Transition animation='jiggle' visible={animate}>
-          <LemonLeaf src='../images/lemon-leaf.png' alt='lemon-leaf' />
-        </Transition>
-        <Transition animation='jiggle' visible={animate}>
-          <HalfLemon src='../images/half-lemon.png' alt='half-lemon' />
-        </Transition>
-        <Transition animation='jiggle' visible={animate}>
-          <WholeLemon src='../images/whole-lemon.png' alt='whole-lemon' />
-        </Transition>
-        <Transition animation='jiggle' visible={animate}>
-          <TwoLemons src='../images/two-lemons.png' alt='two-lemons' />
-        </Transition>
-
         {children}
       </Contents>
     </LayoutWrapper>
