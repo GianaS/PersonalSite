@@ -7,8 +7,7 @@ import MobileNavbar from './mobile-navbar'
 import { useMedia } from '../utilities'
 
 const Contents = styled.main`
-  width: 100wh;
-  height: 100vh;
+  height: 100%;
 `
 
 const LemonLeaf = styled(Image)`
@@ -64,8 +63,8 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
 
   return (
     <>
-      {/* {Navigation} */}
-      {/* <Transition animation='jiggle' visible={animate}>
+      {Navigation}
+      <Transition animation='jiggle' visible={animate}>
         <LemonLeaf src='../images/lemon-leaf.png' alt='lemon-leaf' />
       </Transition>
       <Transition animation='jiggle' visible={animate}>
@@ -76,10 +75,10 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
       </Transition>
       <Transition animation='jiggle' visible={animate}>
         <TwoLemons src='../images/two-lemons.png' alt='two-lemons' />
-      </Transition> */}
-      {/* <main> */}
+      </Transition>
+      <Contents>
         {children}
-      {/* </main> */}
+      </Contents>
     </>
   )
 }
