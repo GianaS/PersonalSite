@@ -2,6 +2,9 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
+import Logo from './logo'
+import colors from '../styles/colors'
+
 const Wrapper = styled.div`
   padding: 30px;
   display: flex;
@@ -21,20 +24,20 @@ const Tabs = styled.div`
 
 const Tab = styled(Link)`
   font-size: 20px;
-  color: #02020A;
+  color: ${colors.black};
   &.active {
-    border-bottom: solid 1px #06A77D;
+    border-bottom: solid 1px ${colors.green};
     padding-bottom:6px;
-    color: #06A77D;
+    color: ${colors.green};
     font-weight: bold;
   }
 `
 
-type HeaderProps = {
+type NavbarProps = {
   setAnimate: () => void
 }
 
-const Header = ({ setAnimate }: HeaderProps): JSX.Element => {
+const Navbar = ({ setAnimate }: NavbarProps): JSX.Element => {
   const tabs = [
     {
       title: 'Home',
@@ -60,7 +63,7 @@ const Header = ({ setAnimate }: HeaderProps): JSX.Element => {
 
   return (
     <Wrapper>
-      <Tab to='/home' onClick={setAnimate}>GS</Tab>
+      <Logo setAnimate={setAnimate} />
       <Tabs>
         {tabs.map(({ title, link }) => {
           return (
@@ -79,4 +82,4 @@ const Header = ({ setAnimate }: HeaderProps): JSX.Element => {
   )
 }
 
-export default Header
+export default Navbar
