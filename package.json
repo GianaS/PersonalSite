@@ -45,7 +45,8 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "typecheck": "tsc --noEmit",
-    "lint": "eslint --ext .ts,.tsx ./src"
+    "lint": "eslint --ext .ts,.tsx ./src",
+    "precommit": "npm run typecheck && npm run lint && npm audit"
   },
   "repository": {
     "type": "git",
