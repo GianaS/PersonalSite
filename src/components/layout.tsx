@@ -6,10 +6,6 @@ import Navbar from './navbar'
 import MobileNavbar from './mobile-navbar'
 import { useMedia } from '../utilities'
 
-const LayoutWrapper = styled.div`
-  height: 100vh;
-`
-
 const Contents = styled.main`
   width: 100wh;
   height: 100vh;
@@ -81,9 +77,9 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
       <Transition animation='jiggle' visible={animate}>
         <TwoLemons src='../images/two-lemons.png' alt='two-lemons' />
       </Transition> */}
-      {/* <Contents> */}
+      {/* <main> */}
         {children}
-      {/* </Contents> */}
+      {/* </main> */}
     </>
   )
 }
