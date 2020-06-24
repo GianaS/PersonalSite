@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Image, Grid } from 'semantic-ui-react'
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'

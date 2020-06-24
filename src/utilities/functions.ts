@@ -1,6 +1,6 @@
 import React from 'react'
 
-const useMedia = (query: string) => {
+const useMedia = (query: string): boolean => {
     const [matches, setMatches] = React.useState(
         window.matchMedia(query).matches
     )

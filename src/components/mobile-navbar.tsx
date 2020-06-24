@@ -63,7 +63,7 @@ const MobileNavbar = ({ setAnimate }: MobileNavbarProps): JSX.Element => {
       >
         {navbarItems.map(({ title, link, icon }) => {
           return (
-            <Menu.Item>
+            <Menu.Item key={title}>
               <MenuItemWrapper to={link}>
                 <Icon name={icon} />
                 <ItemText>{title}</ItemText>

@@ -47,7 +47,7 @@ type LayoutProps = {
   children: React.ReactChild
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout = ({ children }: LayoutProps): JSX.Element => {
   const [animate, setAnimate] = React.useState(true)
   const navbarBreakpoint = useMedia('(max-width: 800px)')
 
