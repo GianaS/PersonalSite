@@ -64,16 +64,16 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
     <>
       {Navigation}
-      <Transition animation='jiggle' visible={animate}>
+      <Transition duration='1000' animation='jiggle' visible={animate}>
         <LemonLeaf src='../images/lemon-leaf.png' alt='lemon-leaf' />
       </Transition>
-      <Transition animation='jiggle' visible={animate}>
+      <Transition duration='1000' animation='jiggle' visible={animate}>
         <HalfLemon src='../images/half-lemon.png' alt='half-lemon' />
       </Transition>
-      <Transition animation='jiggle' visible={animate}>
+      <Transition duration='1000' animation='jiggle' visible={animate}>
         <WholeLemon src='../images/whole-lemon.png' alt='whole-lemon' />
       </Transition>
-      <Transition animation='jiggle' visible={animate}>
+      <Transition duration='1000' animation='jiggle' visible={animate}>
         <TwoLemons src='../images/two-lemons.png' alt='two-lemons' />
       </Transition>
       <Contents>
