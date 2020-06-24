@@ -18,7 +18,7 @@ const Contents = styled.main`
 const LemonLeaf = styled(Image)`
   position: absolute !important;
   right: 0;
-  top: 76px;
+  top: 10%;
   z-index: -1;
   width: calc(120px + (270 - 120) * ((100vw - 300px) / (2000 - 300)));
 `
