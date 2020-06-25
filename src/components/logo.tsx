@@ -14,7 +14,7 @@ type LogoProps = {
 }
 
 const Logo = ({ setAnimate }: LogoProps): JSX.Element => {
-  return <StyledLogo to='/home' onClick={setAnimate}>GS</StyledLogo>
+  return <StyledLogo to='/home' onClick={setAnimate} />
 }
 
 export default Logo

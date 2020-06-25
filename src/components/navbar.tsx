@@ -30,7 +30,9 @@ const Tab = styled(Link)`
     border-bottom: solid 1px ${colors.green};
     padding-bottom:6px;
     color: ${colors.green};
-    font-weight: bold;
+  }
+  :hover {
+    color: ${colors.green};
   }
 `
 
