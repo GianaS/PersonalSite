@@ -1,9 +1,16 @@
-
 html, #___gatsby, #gatsby-focus-wrapper {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-    height: 100%;
-    background-color: #F1FAEE;
+  height: 100%;
+  background-color: #F1FAEE;
+}
+
+::selection {
+  background: #F2BAC9; /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: #F2BAC9; /* Gecko Browsers */
 }

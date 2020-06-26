@@ -16,10 +16,9 @@ const Wrapper = styled.div`
 `
 
 const Tabs = styled.div`
-  width: 30%;
   display: flex;
   justify-content: space-between;
-  min-width: 470px;
+  min-width: 380px;
   padding-left: 20px;
 `
 
@@ -28,11 +27,15 @@ const Tab = styled(Link)`
   color: ${colors.black};
   &.active {
     border-bottom: solid 1px ${colors.green};
-    padding-bottom:6px;
+    padding-bottom: 6px;
     color: ${colors.green};
   }
   :hover {
-    color: ${colors.green};
+    color: ${colors.pink};
+    &.active {
+      border-bottom: solid 1px ${colors.pink};
+      padding-bottom: 6px;
+    }
   }
 `
 

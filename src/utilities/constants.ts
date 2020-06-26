@@ -1,28 +1,23 @@
 const navbarItems = [
   {
     title: 'Home',
-    link: '/home',
+    link: '/',
     icon: 'home'
   },
   {
     title: 'About',
-    link: '/about',
+    link: '/coming-soon',
     icon: 'smile outline'
   },
   {
     title: 'Resume',
-    link: '/resume',
+    link: '/coming-soon',
     icon: 'file alternate outline'
   },
   {
     title: 'Contact',
-    link: '/contact',
+    link: '/coming-soon',
     icon: 'phone'
-  },
-  {
-    title: 'Not Found',
-    link: '/404',
-    icon: 'cancel'
   }
 ] as const
 
