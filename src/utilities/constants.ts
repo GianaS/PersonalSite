@@ -11,7 +11,7 @@ const navbarItems = [
   },
   {
     title: 'Resume',
-    link: '/coming-soon',
+    link: '/resume',
     icon: 'file alternate outline'
   },
   {
