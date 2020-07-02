@@ -48,6 +48,13 @@ const StyledMarkdown = styled.div`
     margin-bottom: 0;
   }
 
+  a {
+    color: ${colors.black};
+    :hover {
+      color: ${colors.pink};
+    }
+  }
+
 `
 
 const Resume = ({ data }) => {
