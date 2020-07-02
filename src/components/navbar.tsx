@@ -41,6 +41,7 @@ const Tab = styled(Link)`
 
 type NavbarProps = {
   setAnimate: () => void
+  id?: string
 }
 
 const Navbar = ({ setAnimate }: NavbarProps): JSX.Element => {
