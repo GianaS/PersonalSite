@@ -1,7 +1,18 @@
-/**
- * Implement Gatsby's SSR (Server Side Rendering) APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/ssr-apis/
- */
+import React from 'react'
 
-// You can delete this file if you're not using it
+export const onRenderBody = ({ setPostBodyComponents }) => {
+  setPostBodyComponents([
+    <script src='https://identity.netlify.com/v1/netlify-identity-widget.js'></script>,
+    <script>
+      if (typeof window !== 'undefined' && window.netlifyIdentity) {
+        typeof window !== 'undefined' && window.netlifyIdentity.on('init', user => {
+          if (!user) {
+            typeof window !== 'undefined' && window.netlifyIdentity.on('login', () => {
+              document.location.href = '/admin/';
+            });
+          }
+        })
+      }
+    </script>
+  ])
+}
