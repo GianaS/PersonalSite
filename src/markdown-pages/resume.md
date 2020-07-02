@@ -6,7 +6,7 @@ title: 'My Resume'
 
 # Education
 
-  > Providence College, Providence RI  
+  > **[Providence College,](https://www.providence.edu/)** Providence RI  
     >> Bachelor of Science in Computer Science  
     >> Bachelor of Arts in Mathematics  
 
