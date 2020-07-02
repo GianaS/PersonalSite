@@ -51,7 +51,7 @@ const StyledMarkdown = styled.div`
   a {
     color: ${colors.green};
     text-decoration: underline;
-    
+
     :hover {
       color: ${colors.pink};
     }
@@ -59,7 +59,15 @@ const StyledMarkdown = styled.div`
 
 `
 
-const Resume = ({ data }) => {
+type ResumeProps = {
+  data: {
+    markdownRemark: {
+      html: HTMLElement
+    }
+  }
+}
+
+const Resume = ({ data }: ResumeProps): JSX.Element => {
   const { markdownRemark: { html } } = data
 
   const navbar = typeof document !== 'undefined' && document.getElementById('nav-bar')
@@ -79,7 +87,7 @@ const Resume = ({ data }) => {
   )
 }
 
-const pageQuery = () => graphql`
+const pageQuery = (): void => graphql`
   query($slug: String!) {
     markdownRemark(frontmatter: { slug: { eq: $slug } }) {
       html
