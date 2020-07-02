@@ -11,7 +11,7 @@ const Contents = styled.main`
 `
 
 const LemonLeaf = styled(Image)`
-  position: absolute !important;
+  position: fixed !important;
   right: 0%;
   top: 10%;
   z-index: -1;
@@ -19,23 +19,23 @@ const LemonLeaf = styled(Image)`
 `
 
 const HalfLemon = styled(Image)`
-  position: absolute !important;
-  left: 10%;
+  position: fixed !important;
+  left: 4%;
   top: 0%;
   z-index: -1;
   width: calc(100px + (205 - 100) * ((100vw - 300px) / (2000 - 300)));
 `
 
 const TwoLemons = styled(Image)`
-  position: absolute !important;
-  left: 3%;
-  bottom: 7%;
+  position: fixed !important;
+  left: 0;
+  bottom: 2%;
   z-index: -1;
   width: calc(100px + (202 - 100) * ((100vw - 300px) / (2000 - 300)));
 `
 
 const WholeLemon = styled(Image)`
-  position: absolute !important;
+  position: fixed !important;
   bottom: 0%;
   right: 5%;
   z-index: -1;
@@ -57,8 +57,8 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
   const Navigation = navbarBreakpoint === undefined ? null :
     (
       navbarBreakpoint
-        ? <MobileNavbar setAnimate={() => setAnimate(!animate)} />
-        : <Navbar setAnimate={() => setAnimate(!animate)} />
+        ? <MobileNavbar id='nav-bar' setAnimate={() => setAnimate(!animate)} />
+        : <Navbar id='nav-bar' setAnimate={() => setAnimate(!animate)} />
     )
 
   return (

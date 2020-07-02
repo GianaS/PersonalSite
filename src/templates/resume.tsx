@@ -3,35 +3,68 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 
 import Layout from '../components/layout'
+import colors from '../styles/colors'
+
+type ResumeWrapperProps = {
+  navbarHeight: string
+}
 
 const ResumeWrapper = styled.div`
-  display: inline-block;
-  height: 100%;
-  padding: 0 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  ${({navbarHeight}: ResumeWrapperProps) => (
+    `padding: ${navbarHeight} 20% 0 20%;`
+  )}
 `
 
-const Resume = ({
-  data, // this prop will be injected by the GraphQL query below.
-}) => {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { frontmatter } = markdownRemark
+const StyledMarkdown = styled.div`
+  display: inline-block;
+  width: 100%;
+  
+  h1 {
+    color: ${colors.green};
+    font-size: 38px;
+  }
 
-  const resumeData = frontmatter.sectionHeaders.reduce((acc, a, i) => {
-    return {
-      ...acc,
-      [a]: frontmatter.sectionData[i]
+  h2 {
+    color: blue;
+  }
+
+  ul {
+    color: purple;
+    color: ${colors.black};
+    font-size: 18px;
+    padding-left: 22px;
+
+    li {
+      line-height: 25px;
     }
-  }, {})
+  }
 
-  console.log('this is resume data', resumeData)
+  p {
+    color: ${colors.black};
+    font-size: 18px;
+    margin-bottom: 0;
+  }
 
+`
+
+const Resume = ({ data }) => {
+  const { markdownRemark: { html } } = data
+
+  const navbar = document.getElementById('nav-bar')
+  const navbarHeight = window && navbar
+    ? window.getComputedStyle(navbar, null).getPropertyValue("background-color")
+    : '86px'
 
   return (
     <Layout>
-      <ResumeWrapper>
-        {Object.keys(resumeData).map(section => {
-          return <div key={section}>{section}: {resumeData[section]}</div>
-        })}
+      <ResumeWrapper navbarHeight={navbarHeight} >
+        <StyledMarkdown
+          dangerouslySetInnerHTML={{ __html: html }}
+        >
+        </StyledMarkdown>
       </ResumeWrapper>
     </Layout>
   )
@@ -45,8 +78,6 @@ const pageQuery = () => graphql`
         date(formatString: "MMMM DD, YYYY")
         slug
         title
-        sectionHeaders
-        sectionData
       }
     }
   }

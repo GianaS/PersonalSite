@@ -39,6 +39,7 @@ const ItemText = styled.p`
 
 type MobileNavbarProps = {
   setAnimate: () => void
+  id?: string
 }
 
 const MobileNavbar = ({ setAnimate }: MobileNavbarProps): JSX.Element => {
