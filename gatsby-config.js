@@ -38,6 +38,18 @@ module.exports = {
     {
       resolve: `gatsby-plugin-styled-components`,
     },
-    `gatsby-plugin-remove-trailing-slashes`
+    `gatsby-plugin-remove-trailing-slashes`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [{
+          resolve: "gatsby-remark-external-links",
+          options: {
+            target: "_blank",
+            rel: "noopener noreferrer"
+          }
+        }]
+      }
+    }
   ],
 }

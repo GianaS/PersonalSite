@@ -49,7 +49,9 @@ const StyledMarkdown = styled.div`
   }
 
   a {
-    color: ${colors.black};
+    color: ${colors.green};
+    text-decoration: underline;
+    
     :hover {
       color: ${colors.pink};
     }
@@ -60,8 +62,8 @@ const StyledMarkdown = styled.div`
 const Resume = ({ data }) => {
   const { markdownRemark: { html } } = data
 
-  const navbar = document.getElementById('nav-bar')
-  const navbarHeight = window && navbar
+  const navbar = typeof document !== 'undefined' && document.getElementById('nav-bar')
+  const navbarHeight = typeof window !== 'undefined' && navbar
     ? window.getComputedStyle(navbar, null).getPropertyValue("background-color")
     : '86px'
 
