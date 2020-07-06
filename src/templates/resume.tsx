@@ -13,8 +13,13 @@ const ResumeWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  ${({navbarHeight}: ResumeWrapperProps) => (
-    `padding: ${navbarHeight} 20% 0 20%;`
+  ${({ navbarHeight }: ResumeWrapperProps) => (
+    `
+      padding: ${navbarHeight} 20% 0 20%;
+      @media (max-width: 800px) {
+        padding: ${navbarHeight} 12% 0 12%;
+      }
+    `
   )}
 `
 
@@ -24,7 +29,7 @@ const StyledMarkdown = styled.div`
   
   h1 {
     color: ${colors.green};
-    font-size: 38px;
+    font-size: calc(17px + (38 - 17) * ((100vw - 300px) / (2000 - 300)));
   }
 
   h2 {
@@ -34,7 +39,7 @@ const StyledMarkdown = styled.div`
   ul {
     color: purple;
     color: ${colors.black};
-    font-size: 18px;
+    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (2000 - 300)));
     padding-left: 22px;
 
     li {
@@ -44,7 +49,7 @@ const StyledMarkdown = styled.div`
 
   p {
     color: ${colors.black};
-    font-size: 18px;
+    font-size: calc(14px + (18 - 14) * ((100vw - 300px) / (2000 - 300)));
     margin-bottom: 0;
   }
 
@@ -57,6 +62,11 @@ const StyledMarkdown = styled.div`
     }
   }
 
+  @media (max-width: 800px) {
+    blockquote {
+      margin: 5px;
+    }
+  } 
 `
 
 type ResumeProps = {

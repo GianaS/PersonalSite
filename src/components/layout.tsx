@@ -15,7 +15,7 @@ const LemonLeaf = styled(Image)`
   right: 0%;
   top: 10%;
   z-index: -1;
-  width: calc(120px + (270 - 120) * ((100vw - 300px) / (2000 - 300)));
+  width: calc(80px + (270 - 80) * ((100vw - 300px) / (2000 - 300)));
 `
 
 const HalfLemon = styled(Image)`
@@ -23,7 +23,7 @@ const HalfLemon = styled(Image)`
   left: 4%;
   top: 0%;
   z-index: -1;
-  width: calc(100px + (205 - 100) * ((100vw - 300px) / (2000 - 300)));
+  width: calc(60px + (205 - 60) * ((100vw - 300px) / (2000 - 300)));
 `
 
 const TwoLemons = styled(Image)`
@@ -31,7 +31,7 @@ const TwoLemons = styled(Image)`
   left: 0;
   bottom: 2%;
   z-index: -1;
-  width: calc(100px + (202 - 100) * ((100vw - 300px) / (2000 - 300)));
+  width: calc(60px + (202 - 60) * ((100vw - 300px) / (2000 - 300)));
 `
 
 const WholeLemon = styled(Image)`
@@ -39,7 +39,7 @@ const WholeLemon = styled(Image)`
   bottom: 0%;
   right: 5%;
   z-index: -1;
-  width: calc(110px + (202 - 110) * ((100vw - 300px) / (2000 - 300)));
+  width: calc(70px + (202 - 70) * ((100vw - 300px) / (2000 - 300)));
 `
 
 type LayoutProps = {
