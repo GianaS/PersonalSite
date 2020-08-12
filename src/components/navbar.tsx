@@ -13,6 +13,7 @@ const Wrapper = styled.div`
   align-items: center;
   position: fixed;
   width: 100%;
+  z-index: 10;
 `
 
 const Tabs = styled.div`
@@ -26,7 +27,7 @@ const Tab = styled(Link)`
   font-size: 20px;
   color: ${colors.black};
   &.active {
-    border-bottom: solid 1px ${colors.green};
+    border-bottom: solid 2px ${colors.green};
     padding-bottom: 6px;
     color: ${colors.green};
   }

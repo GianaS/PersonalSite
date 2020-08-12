@@ -5,8 +5,8 @@ const navbarItems = [
     icon: 'home'
   },
   {
-    title: 'About',
-    link: '/coming-soon',
+    title: 'About Me',
+    link: '/about',
     icon: 'smile outline'
   },
   {

@@ -14,6 +14,7 @@ const Wrapper = styled.div`
   align-items: center;
   position: fixed;
   width: 100%;
+  z-index: 10;
 `
 
 const StyledButton = styled(Button)`
@@ -60,7 +61,7 @@ const MobileNavbar = ({ setAnimate }: MobileNavbarProps): JSX.Element => {
             onHide={() => setShowSidebar(false)}
             vertical
             visible={showSidebar}
-            width='thin'
+            width='wide'
             direction='right'
           >
             {navbarItems.map(({ title, link, icon }) => {
