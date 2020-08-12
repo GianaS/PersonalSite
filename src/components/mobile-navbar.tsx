@@ -67,7 +67,7 @@ const MobileNavbar = ({ setAnimate }: MobileNavbarProps): JSX.Element => {
             {navbarItems.map(({ title, link, icon }) => {
               return (
                 <Menu.Item key={title}>
-                  <MenuItemWrapper to={link}>
+                  <MenuItemWrapper to={link} onClick={() => setShowSidebar(false)}>
                     <Icon name={icon} />
                     <ItemText>{title}</ItemText>
                   </MenuItemWrapper>
