@@ -22,7 +22,7 @@ const NotFound = (): JSX.Element => {
   return (
     <Layout>
       <Wrapper>
-        <SEO title='Home Page' />
+        <SEO title='Not Found' />
         <div>
           <Name>Not Found</Name>
         </div>
