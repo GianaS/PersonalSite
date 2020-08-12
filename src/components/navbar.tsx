@@ -26,13 +26,16 @@ const Tabs = styled.div`
 const Tab = styled(Link)`
   font-size: 20px;
   color: ${colors.black};
+
   &.active {
     border-bottom: solid 2px ${colors.green};
     padding-bottom: 6px;
     color: ${colors.green};
   }
+
   :hover {
     color: ${colors.pink};
+    
     &.active {
       border-bottom: solid 1px ${colors.pink};
       padding-bottom: 6px;
