@@ -13,11 +13,6 @@ const navbarItems = [
     title: 'Resume',
     link: '/resume',
     icon: 'file alternate outline'
-  },
-  {
-    title: 'Contact',
-    link: '/coming-soon',
-    icon: 'phone'
   }
 ] as const
 

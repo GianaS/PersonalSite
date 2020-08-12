@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 const Tabs = styled.div`
   display: flex;
   justify-content: space-between;
-  min-width: 380px;
+  min-width: 280px;
   padding-left: 20px;
 `
 
