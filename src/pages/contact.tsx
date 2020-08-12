@@ -22,9 +22,10 @@ const Contact = (): JSX.Element => {
   return (
     <Layout>
       <Wrapper>
-        <SEO title='Home Page' />
+        <SEO title='Contact Page' />
         <div>
           <Name>Contact</Name>
+          {console.log("this is testing - ", process.env.TESTING)}
         </div>
       </Wrapper>
     </Layout>

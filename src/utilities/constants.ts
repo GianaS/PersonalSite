@@ -16,7 +16,7 @@ const navbarItems = [
   },
   {
     title: 'Contact',
-    link: '/coming-soon',
+    link: '/contact',
     icon: 'phone'
   }
 ] as const
