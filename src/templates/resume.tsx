@@ -19,6 +19,7 @@ const ResumeWrapper = styled.div`
       padding: 0 20% 0 20%;
       @media (max-width: 800px) {
         padding: ${navbarHeight} 12% 0 12%;
+        top: 12px;
       }
     `
   )}
