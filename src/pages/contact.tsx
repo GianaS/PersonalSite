@@ -25,7 +25,6 @@ const Contact = (): JSX.Element => {
         <SEO title='Contact Page' />
         <div>
           <Name>Contact</Name>
-          {console.log("this is testing - ", process.env.GATSBY_TESTING)}
         </div>
       </Wrapper>
     </Layout>
