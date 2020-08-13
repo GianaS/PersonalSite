@@ -48,7 +48,9 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
   const [animate, setAnimate] = React.useState(true)
-  const navbarBreakpoint = typeof window !== 'undefined' ? useMedia('(max-width: 800px)') : undefined
+  const navbarBreakpoint = typeof window !== 'undefined'
+    ? useMedia('(max-width: 800px)')
+    : undefined
 
   React.useEffect(() => {
     if (animate) setAnimate(!animate)
