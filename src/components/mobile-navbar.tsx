@@ -1,7 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { Menu, Button, Icon, Sidebar } from 'semantic-ui-react'
+import {
+  Menu,
+  Button,
+  Icon,
+  Sidebar
+} from 'semantic-ui-react'
 
 import Logo from './logo'
 import colors from '../styles/colors'
